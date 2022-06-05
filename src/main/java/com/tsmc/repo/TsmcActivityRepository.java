@@ -22,7 +22,7 @@ public interface TsmcActivityRepository extends JpaRepository<TsmcActivity, Stri
 	+ " AND DAY = (:day) \r\n";
 	
 	@Query(value=SQL_QUERY_ACTY, nativeQuery=true)
-	public List<TsmcActivity> fetchByActivityNameAndActivityDate(
+	public Optional<TsmcActivity> fetchByActivityNameAndActivityDate(
 			@Param("activityName") String activityName,
 			@Param("year") String year,
 			@Param("month") String month,

@@ -31,5 +31,10 @@ public class PrizeDetailRequest {
 	public void setQuota(Integer quota) {
 		this.quota = quota;
 	}
-		
+	
+	@Override
+	public String toString() {
+		return "PrizeDetailRequest [oid=" + oid + ", activityId=" + activityId + ", prize=" + prize + ", quota=" + quota
+				+ "]";
+	}		
 }

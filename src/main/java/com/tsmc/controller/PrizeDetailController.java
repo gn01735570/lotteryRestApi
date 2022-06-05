@@ -40,7 +40,7 @@ private static final Logger logger = LoggerFactory.getLogger(PrizeDetailControll
 	public PrizeDetail createPrizeDetail(
 			@RequestBody PrizeDetailRequest prizeDetailReq
 			) {
-		logger.info("[{}]",  prizeDetailReq.toString());
+		logger.debug("[{}]",  prizeDetailReq.toString());
 		return prizeDetailService.createPrizeDetail(prizeDetailReq);
 	}	
 	

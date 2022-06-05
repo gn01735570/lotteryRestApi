@@ -1,6 +1,8 @@
 package com.tsmc.controller;
 
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpClientErrorException;
 
 import com.tsmc.dto.ActivityRequest;
 import com.tsmc.entity.TsmcActivity;
@@ -31,14 +34,14 @@ public class LottereyActivityController {
 	
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
-	public List<TsmcActivity> fetchTsmcActivity(
+	public Object fetchTsmcActivity (
 			@RequestParam(value="name", required = true) String activityName,
 			@RequestParam(value="year", required = true) String year,
 			@RequestParam(value="month", required = true) String month,
 			@RequestParam(value="day", required = true) String day
 			) {
 		logger.info("[{}], [{}], [{}], [{}]", activityName, year, month, day);
-		return activityService.fetchTsmcActivity(activityName, year, month, day);
+	    return activityService.fetchTsmcActivity(activityName, year, month, day);	
 	}
 	
 	
@@ -47,8 +50,7 @@ public class LottereyActivityController {
 	public TsmcActivity createTsmcActivity(
 			@RequestBody ActivityRequest activityReq
 			) {
-		logger.info("[{}]",  activityReq);
+		logger.debug("[{}]",  activityReq.toString());
 		return activityService.createTsmcActivity(activityReq);
-	}	
-
+	}		
 }

@@ -73,5 +73,10 @@ public class ActivityRequest {
 		this.prizeCount = prizeCount;
 	}
 
+	@Override
+	public String toString() {
+		return "ActivityRequest [name=" + name + ", year=" + year + ", month=" + month + ", day=" + day
+				+ ", usersCount=" + usersCount + ", prizeCount=" + prizeCount + "]";
+	}	
 	
 }
