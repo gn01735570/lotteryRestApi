@@ -3,7 +3,7 @@
 
 - TSMC_ACTY
 
-![image](https://user-images.githubusercontent.com/72732535/172060243-ca6f1b32-0484-4f22-9d0f-c8c72166055c.png)
+![image](https://user-images.githubusercontent.com/72732535/172450211-5a8a8864-fb6f-4c36-9775-c62e8acb6648.png)
 
 
 - TSMC_ACTY_PRIZE_DETL
