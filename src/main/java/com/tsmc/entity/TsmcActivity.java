@@ -30,6 +30,12 @@ public class TsmcActivity {
 	
 	@Column(name = "PRIZE_COUNT")
 	private String prizeCount;
+	
+	@Column(name = "RANDOM_LIST")
+	private String randomList;
+	
+	@Column(name = "CURRENT_INDEX")
+	private String currentIndex;
 
 	public String getDay() {
 		return day;
@@ -86,6 +92,22 @@ public class TsmcActivity {
 
 	public void setPrizeCount(String prizeCount) {
 		this.prizeCount = prizeCount;
+	}
+
+	public String getRandomList() {
+		return randomList;
+	}
+
+	public void setRandomList(String randomList) {
+		this.randomList = randomList;
+	}
+
+	public String getCurrentIndex() {
+		return currentIndex;
+	}
+
+	public void setCurrentIndex(String currentIndex) {
+		this.currentIndex = currentIndex;
 	}	
 
 }

@@ -1,5 +1,7 @@
 package com.tsmc.controller;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,7 @@ public class PrizeEmployeeController {
 	
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
-	public PrizeEmployees fetchPrizeEmployees(
+	public Optional<PrizeEmployees> fetchPrizeEmployees(
 			@RequestParam(value="actyId", required = true) String actyId,
 			@RequestParam(value="prizeId", required = true) String prizeId
 			) {

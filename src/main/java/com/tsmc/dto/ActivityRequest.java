@@ -1,6 +1,6 @@
 package com.tsmc.dto;
 
-public class ActivityRequest {
+public class ActivityRequest {	
 	
 	private String name;
 	
@@ -14,8 +14,13 @@ public class ActivityRequest {
 	
 	private String prizeCount;
 	
+	private String randomList;
 	
-	public ActivityRequest(String name, String year, String month, String day, String usersCount, String prizeCount) {
+	private String currentIndex;
+	
+	
+	public ActivityRequest(String name, String year, String month, String day, String usersCount, String prizeCount,
+			String randomList, String currentIndex) {
 		super();
 		this.name = name;
 		this.year = year;
@@ -23,6 +28,8 @@ public class ActivityRequest {
 		this.day = day;
 		this.usersCount = usersCount;
 		this.prizeCount = prizeCount;
+		this.randomList = randomList;
+		this.currentIndex = currentIndex;
 	}
 
 	public String getName() {
@@ -56,7 +63,7 @@ public class ActivityRequest {
 	public void setDay(String day) {
 		this.day = day;
 	}
-	
+
 	public String getUsersCount() {
 		return usersCount;
 	}
@@ -73,10 +80,30 @@ public class ActivityRequest {
 		this.prizeCount = prizeCount;
 	}
 
+	public String getRandomList() {
+		return randomList;
+	}
+
+	public void setRandomList(String randomList) {
+		this.randomList = randomList;
+	}
+
+	public String getCurrentIndex() {
+		return currentIndex;
+	}
+
+	public void setCurrentIndex(String currentIndex) {
+		this.currentIndex = currentIndex;
+	}
+
 	@Override
 	public String toString() {
 		return "ActivityRequest [name=" + name + ", year=" + year + ", month=" + month + ", day=" + day
-				+ ", usersCount=" + usersCount + ", prizeCount=" + prizeCount + "]";
-	}	
+				+ ", usersCount=" + usersCount + ", prizeCount=" + prizeCount + ", randomList=" + randomList
+				+ ", currentIndex=" + currentIndex + "]";
+	}
+	
+	
+
 	
 }

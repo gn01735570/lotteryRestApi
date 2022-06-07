@@ -7,12 +7,16 @@ public class PrizeEmployeesRequest {
 	private String prizeId;
 
 	private String emplsId;
+	
+	private String quota;
+	
 
-	public PrizeEmployeesRequest(String actyId, String prizeId, String emplsId) {
+	public PrizeEmployeesRequest(String actyId, String prizeId, String emplsId, String quota) {
 		super();
 		this.actyId = actyId;
 		this.prizeId = prizeId;
 		this.emplsId = emplsId;
+		this.quota = quota;
 	}
 
 	public String getActyId() {
@@ -38,11 +42,20 @@ public class PrizeEmployeesRequest {
 	public void setEmplsId(String emplsId) {
 		this.emplsId = emplsId;
 	}
+		
+
+	public String getQuota() {
+		return quota;
+	}
+
+	public void setQuota(String quota) {
+		this.quota = quota;
+	}
 
 	@Override
 	public String toString() {
-		return "PrizeEmployeesRequest [actyId=" + actyId + ", prizeId=" + prizeId + ", emplsId=" + emplsId + "]";
-	}		
-	
-	
+		return "PrizeEmployeesRequest [actyId=" + actyId + ", prizeId=" + prizeId + ", emplsId=" + emplsId
+				+ ", currentIndex=" + quota + "]";
+	}	
+		
 }
