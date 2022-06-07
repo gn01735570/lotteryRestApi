@@ -1,5 +1,5 @@
 # lotteryRestApi
-此次抽籤採用Fisher–Yates shuffle algorithm
+此次抽籤採用Fisher–Yates shuffle algorithm，主要作法和邏輯為:
 
 1. 將加入抽獎的總人員名單(ex: 總人數為 n)，從最後一位人員開始依序向前，和前面任意 n-1 個數字中的一個數字進行交换
 2. 亂數選取介於0 ~ index (index = n-1) 的數字，將選到的數字位置，陣列元素的人員和最後一位人員的排序交換swap
