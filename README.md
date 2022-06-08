@@ -11,8 +11,9 @@
 ![image](https://user-images.githubusercontent.com/72732535/172505195-65627abf-495c-4201-93b9-368901e03bc9.png)
 
 
-lotteryRestApi抽籤實作function，採用Fisher–Yates shuffle algorithm
 
+
+lotteryRestApi抽籤實作function，採用Fisher–Yates shuffle algorithm
 ![image](https://user-images.githubusercontent.com/72732535/172470594-1304022a-afb8-4b32-9788-aa6353b5935d.png)
 
 
